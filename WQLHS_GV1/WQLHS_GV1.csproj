@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C3EB54D4-4474-47F9-9563-5A74F4B0708F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WQLHS_GV1</RootNamespace>
+    <AssemblyName>WQLHS_GV1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionString.cs" />
+    <Compile Include="CTdiemHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTdiemHS.Designer.cs">
+      <DependentUpon>CTdiemHS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTDiemHSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTDiemHSinh.Designer.cs">
+      <DependentUpon>CTDiemHSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiemMH2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiemMH2.Designer.cs">
+      <DependentUpon>DiemMH2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DN.Designer.cs">
+      <DependentUpon>DN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DuaraReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DuaraReport.Designer.cs">
+      <DependentUpon>DuaraReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiangDaycs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiangDaycs.Designer.cs">
+      <DependentUpon>GiangDaycs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV.Designer.cs">
+      <DependentUpon>GV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HocKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HocKy.Designer.cs">
+      <DependentUpon>HocKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HS.Designer.cs">
+      <DependentUpon>HS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lop.Designer.cs">
+      <DependentUpon>Lop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonHoc.Designer.cs">
+      <DependentUpon>MonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NamHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NamHoc.Designer.cs">
+      <DependentUpon>NamHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLHS_GV1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHS_GV1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLHS_GV1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHS_GV1DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLHS_GV1DataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHS_GV1DataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLHS_GV1DataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHS_GV1DataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLHS_GV1DataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHS_GV1DataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLHS_GV1DataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHS_GV1DataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLHS_GV1DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHS_GV1DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLHS_GV1DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHS_GV1DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLHS_GV1DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHS_GV1DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLHS_GV1DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHS_GV1DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLHS_GV1DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHS_GV1DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLHS_GV1DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHS_GV1DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLHS_GV1DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHS_GV1DataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLHS_GV1DataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHS_GV1DataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TBCN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TBCN.Designer.cs">
+      <DependentUpon>TBCN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TBHK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TBHK.Designer.cs">
+      <DependentUpon>TBHK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TongQuanMonHoccs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TongQuanMonHoccs.Designer.cs">
+      <DependentUpon>TongQuanMonHoccs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruyvanCSDL.cs" />
+    <EmbeddedResource Include="CTdiemHS.resx">
+      <DependentUpon>CTdiemHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTDiemHSinh.resx">
+      <DependentUpon>CTDiemHSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiemMH2.resx">
+      <DependentUpon>DiemMH2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DN.resx">
+      <DependentUpon>DN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DuaraReport.resx">
+      <DependentUpon>DuaraReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiangDaycs.resx">
+      <DependentUpon>GiangDaycs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV.resx">
+      <DependentUpon>GV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HocKy.resx">
+      <DependentUpon>HocKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HS.resx">
+      <DependentUpon>HS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lop.resx">
+      <DependentUpon>Lop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonHoc.resx">
+      <DependentUpon>MonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NamHoc.resx">
+      <DependentUpon>NamHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TBCN.resx">
+      <DependentUpon>TBCN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TBHK.resx">
+      <DependentUpon>TBHK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TongQuanMonHoccs.resx">
+      <DependentUpon>TongQuanMonHoccs.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QLHS_GV1DataSet.xsc">
+      <DependentUpon>QLHS_GV1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHS_GV1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHS_GV1DataSet.xss">
+      <DependentUpon>QLHS_GV1DataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <None Include="QLHS_GV1DataSet1.xsc">
+      <DependentUpon>QLHS_GV1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHS_GV1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHS_GV1DataSet1.xss">
+      <DependentUpon>QLHS_GV1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet10.xsc">
+      <DependentUpon>QLHS_GV1DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHS_GV1DataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHS_GV1DataSet10.xss">
+      <DependentUpon>QLHS_GV1DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet11.xsc">
+      <DependentUpon>QLHS_GV1DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHS_GV1DataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHS_GV1DataSet11.xss">
+      <DependentUpon>QLHS_GV1DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet12.xsc">
+      <DependentUpon>QLHS_GV1DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHS_GV1DataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHS_GV1DataSet12.xss">
+      <DependentUpon>QLHS_GV1DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet13.xsc">
+      <DependentUpon>QLHS_GV1DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHS_GV1DataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHS_GV1DataSet13.xss">
+      <DependentUpon>QLHS_GV1DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet2.xsc">
+      <DependentUpon>QLHS_GV1DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHS_GV1DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHS_GV1DataSet2.xss">
+      <DependentUpon>QLHS_GV1DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet3.xsc">
+      <DependentUpon>QLHS_GV1DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHS_GV1DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHS_GV1DataSet3.xss">
+      <DependentUpon>QLHS_GV1DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet4.xsc">
+      <DependentUpon>QLHS_GV1DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHS_GV1DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHS_GV1DataSet4.xss">
+      <DependentUpon>QLHS_GV1DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet5.xsc">
+      <DependentUpon>QLHS_GV1DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHS_GV1DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHS_GV1DataSet5.xss">
+      <DependentUpon>QLHS_GV1DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet6.xsc">
+      <DependentUpon>QLHS_GV1DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHS_GV1DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHS_GV1DataSet6.xss">
+      <DependentUpon>QLHS_GV1DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet7.xsc">
+      <DependentUpon>QLHS_GV1DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHS_GV1DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHS_GV1DataSet7.xss">
+      <DependentUpon>QLHS_GV1DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet8.xsc">
+      <DependentUpon>QLHS_GV1DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHS_GV1DataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHS_GV1DataSet8.xss">
+      <DependentUpon>QLHS_GV1DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet9.xsc">
+      <DependentUpon>QLHS_GV1DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHS_GV1DataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHS_GV1DataSet9.xss">
+      <DependentUpon>QLHS_GV1DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\reload.png" />
+    <None Include="Resources\STUDENT.png" />
+    <None Include="Resources\TEACHER.png" />
+    <None Include="Resources\CLASS.png" />
+    <None Include="Resources\MH.png" />
+    <None Include="Resources\POINT.png" />
+    <None Include="Resources\images %281%29.jpg" />
+    <None Include="Resources\images %283%29.jpg" />
+    <None Include="Resources\images %286%29.jpg" />
+    <None Include="Resources\YEAR.png" />
+    <None Include="Resources\HB.png" />
+    <None Include="Resources\images %285%29.jpg" />
+    <None Include="Resources\images %286%291.jpg" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\HB1.png" />
+    <None Include="Resources\CLASS1.png" />
+    <None Include="Resources\HB2.png" />
+    <None Include="Resources\rate.png" />
+    <None Include="Resources\YEAR1.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\images %285%291.jpg" />
+    <None Include="Resources\07c94786afff03f9645eee94ee48c324.png_wh860.png" />
+    <None Include="Resources\images %281%291.jpg" />
+    <None Include="Resources\07c94786afff03f9645eee94ee48c324.png_wh8601.png" />
+    <None Include="Resources\HB3.png" />
+    <None Include="Resources\hs1.png" />
+    <None Include="Resources\CLASS2.png" />
+    <None Include="Resources\ttn3.jpg" />
+    <None Include="Resources\tt2.jpg" />
+    <None Include="Resources\images %285%292.jpg" />
+    <None Include="Resources\ttn1.jpg" />
+    <None Include="Resources\ttn4.jpg" />
+    <None Include="Resources\ttn67.png" />
+    <None Include="Resources\ttn69.png" />
+    <None Include="Resources\insert1.png" />
+    <None Include="Resources\gnome_software_update_available.png" />
+    <None Include="Resources\insert_object.png" />
+    <None Include="Resources\applications.png" />
+    <None Include="Resources\agt_update_drivers.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\home1.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
