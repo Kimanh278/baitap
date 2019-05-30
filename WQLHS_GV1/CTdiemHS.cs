@@ -35,6 +35,10 @@ namespace WQLHS_GV1
             con.Open();
             GetAllDiem();
         }
+        /// <summary>
+        /// ////////////////////////////////////////
+        /// hjfklg;hjhkgjfhgafio
+        /// </summary>
         public void GetAllDiem()
         {
             SqlCommand stcmd = new SqlCommand("select * from DIEM", con);
