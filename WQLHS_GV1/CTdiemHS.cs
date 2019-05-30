@@ -39,6 +39,8 @@ namespace WQLHS_GV1
         /// ////////////////////////////////////////
         /// hjfklg;hjhkgjfhgafio
         /// </summary>
+        /// manhamahadsifadsjfasjlfkjasdlkfjladjfkladsjfldasjf
+        /// ádhifjdasljfladsjfkljdsfkj
         public void GetAllDiem()
         {
             SqlCommand stcmd = new SqlCommand("select * from DIEM", con);
