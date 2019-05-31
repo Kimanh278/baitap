@@ -21,8 +21,10 @@ namespace WQLHS_GV1
 
         private void TBHK_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qLHS_GV1DataSet14.TBHK' table. You can move, or remove it, as needed.
+            this.tBHKTableAdapter1.Fill(this.qLHS_GV1DataSet14.TBHK);
             // TODO: This line of code loads data into the 'qLHS_GV1DataSet8.TBHK' table. You can move, or remove it, as needed.
-            this.tBHKTableAdapter.Fill(this.qLHS_GV1DataSet8.TBHK);
+            //this.tBHKTableAdapter.Fill(this.qLHS_GV1DataSet8.TBHK);
             con.Open();
             GetAllXepLoai();       
 
@@ -50,24 +52,17 @@ namespace WQLHS_GV1
             txbTBHK.DataBindings.Add("Text", dataGridView1.DataSource, "TBHK");
             txbHL.DataBindings.Clear();
             txbHL.DataBindings.Add("Text", dataGridView1.DataSource, "HocLuc");
-            txbTenHS.DataBindings.Clear();
-            txbTenHS.DataBindings.Add("Text", dataGridView1.DataSource, "TenHS");
+          
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            try
-            {
-                dataGridView1.CurrentRow.Selected = true;
-                LoadData();
-            }
-            catch
-            { }
+            
         }
 
         private void mttThem_Click(object sender, EventArgs e)
         {
-            string stInsert = "insert into TBHK values(@MaNH, @MaHK, @MaHS,@MaHanhKiem, @TBHK,@HocLuc,@TenHS)";
+            string stInsert = "insert into TBHK values(@MaNH, @MaHK, @MaHS,@MaHanhKiem, @TBHK,@HocLuc)";
             SqlCommand stinscmd = new SqlCommand(stInsert, con);
             stinscmd.Parameters.AddWithValue("MaNH", txbMaNH.Text);
             stinscmd.Parameters.AddWithValue("MaHK", txbMaHK.Text);
@@ -75,14 +70,14 @@ namespace WQLHS_GV1
             stinscmd.Parameters.AddWithValue("MaHanhKiem", txbHK.Text);
             stinscmd.Parameters.AddWithValue("TBHK",txbTBHK.Text);
             stinscmd.Parameters.AddWithValue("HocLuc", txbHL.Text);
-            stinscmd.Parameters.AddWithValue("TenHS", txbTenHS.Text);
+           
             stinscmd.ExecuteNonQuery();
             GetAllXepLoai();
         }
 
         private void mttSua_Click(object sender, EventArgs e)
         {
-            string stUpdate = "update TBHK set MaNH = @MaNH, MaHK = @HK, MaHanhKiem = @MaHanhKiem, TBHK = @TBHK,HocLuc=@HocLuc,TenHS=@TenHS where MaHS = @MaHS";
+            string stUpdate = "update TBHK set MaNH = @MaNH, MaHK = @HK, MaHanhKiem = @MaHanhKiem, TBHK = @TBHK,HocLuc=@HocLuc where MaHS = @MaHS";
             SqlCommand stinscmd = new SqlCommand(stUpdate, con);
             stinscmd.Parameters.AddWithValue("MaNH", txbMaNH.Text);
             stinscmd.Parameters.AddWithValue("MaHK", txbMaHK.Text);
@@ -90,7 +85,7 @@ namespace WQLHS_GV1
             stinscmd.Parameters.AddWithValue("MaHanhKiem", txbHK.Text);
             stinscmd.Parameters.AddWithValue("TBHK", txbTBHK.Text);
             stinscmd.Parameters.AddWithValue("HocLuc", txbHL.Text);
-            stinscmd.Parameters.AddWithValue("TenHS", txbTenHS1.Text);
+           
             stinscmd.ExecuteNonQuery();
             GetAllXepLoai();
         }
@@ -102,12 +97,7 @@ namespace WQLHS_GV1
 
         private void mttXoa_Click(object sender, EventArgs e)
         {
-            string stDelete = "delete from TBHK where MaHS = @MaHS";
-            SqlCommand stdelcmd = new SqlCommand(stDelete, con);
-            stdelcmd.Parameters.AddWithValue("MaHS", txbMaHS.Text);
-            MessageBox.Show(" Bạn đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            stdelcmd.ExecuteNonQuery();
-            GetAllXepLoai();
+           
         }
         DataSet timkiem(string query)
         {
@@ -125,8 +115,39 @@ namespace WQLHS_GV1
         private void btnTK_Click(object sender, EventArgs e)
         {
             string TimKiem = txbTK.Text;
-            string query = "select *from TBHK where TenHS like N'%" + TimKiem + "%'or MaHS like '%" + TimKiem + "%'or HocLuc like '%" + TimKiem + "%' or MaHanhKiem like '%"+TimKiem+ "%'or MaHK like '%" + TimKiem + "%'or MaNH like '%" + TimKiem + "%'";
+            string query = "select *from TBHK where MaHS like '%" + TimKiem + "%'or HocLuc like '%" + TimKiem + "%' or MaHanhKiem like '%"+TimKiem+ "%'or MaHK like '%" + TimKiem + "%'or MaNH like '%" + TimKiem + "%'";
             dataGridView1.DataSource = timkiem(query).Tables[0];
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_SelectionChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridView1.CurrentRow.Selected = true;
+                LoadData();
+            }
+            catch
+            { }
+        }
+
+        private void btnQL_Click(object sender, EventArgs e)
+        {
+            GetAllXepLoai();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            string stDelete = "delete from TBHK where MaHS = @MaHS";
+            SqlCommand stdelcmd = new SqlCommand(stDelete, con);
+            stdelcmd.Parameters.AddWithValue("MaHS", txbMaHS.Text);
+            MessageBox.Show(" Bạn đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            stdelcmd.ExecuteNonQuery();
+            GetAllXepLoai();
         }
     }
 }

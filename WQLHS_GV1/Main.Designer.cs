@@ -47,7 +47,7 @@
             this.metroLabel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.metroLabel1.Location = new System.Drawing.Point(457, 9);
+            this.metroLabel1.Location = new System.Drawing.Point(470, 40);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(245, 25);
             this.metroLabel1.TabIndex = 0;
@@ -136,7 +136,7 @@
             // 
             // mttLop
             // 
-            this.mttLop.Location = new System.Drawing.Point(1065, 24);
+            this.mttLop.Location = new System.Drawing.Point(1065, 29);
             this.mttLop.Name = "mttLop";
             this.mttLop.Size = new System.Drawing.Size(135, 155);
             this.mttLop.Style = MetroFramework.MetroColorStyle.Blue;
@@ -167,7 +167,7 @@
             // 
             // mttHS
             // 
-            this.mttHS.Location = new System.Drawing.Point(69, 12);
+            this.mttHS.Location = new System.Drawing.Point(69, 29);
             this.mttHS.Name = "mttHS";
             this.mttHS.Size = new System.Drawing.Size(135, 155);
             this.mttHS.Style = MetroFramework.MetroColorStyle.Blue;
@@ -183,9 +183,10 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(487, 56);
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.Location = new System.Drawing.Point(485, 87);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(165, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(217, 25);
             this.metroLabel2.TabIndex = 46;
             this.metroLabel2.Text = "Trường THCS Thịnh Quang";
             // 
@@ -201,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1255, 593);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroLabel2);

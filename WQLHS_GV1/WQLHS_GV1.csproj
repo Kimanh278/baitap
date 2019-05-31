@@ -185,6 +185,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLHS_GV1DataSet13.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLHS_GV1DataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHS_GV1DataSet14.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QLHS_GV1DataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -390,6 +395,17 @@
     </None>
     <None Include="QLHS_GV1DataSet13.xss">
       <DependentUpon>QLHS_GV1DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet14.xsc">
+      <DependentUpon>QLHS_GV1DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="QLHS_GV1DataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHS_GV1DataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHS_GV1DataSet14.xss">
+      <DependentUpon>QLHS_GV1DataSet14.xsd</DependentUpon>
     </None>
     <None Include="QLHS_GV1DataSet2.xsc">
       <DependentUpon>QLHS_GV1DataSet2.xsd</DependentUpon>
