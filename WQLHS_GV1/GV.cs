@@ -29,6 +29,7 @@ namespace WQLHS_GV1
             // TODO: This line of code loads data into the 'qLHS_GV1DataSet8.GIAOVIEN' table. You can move, or remove it, as needed.
             this.gIAOVIENTableAdapter.Fill(this.qLHS_GV1DataSet8.GIAOVIEN);
             con.Open();
+            GetAllGiaoVien();
 
         }
         DataSet timkiem(string query)
@@ -125,12 +126,12 @@ namespace WQLHS_GV1
             stdelcmd.ExecuteNonQuery();
             GetAllGiaoVien();
         }
-
+        
         private void btnQL_Click(object sender, EventArgs e)
         {
             GetAllGiaoVien();
         }
-
+        
         private void btnTK_Click(object sender, EventArgs e)
         {
             string query = "select *from dbo.GIAOVIEN where TenGV like N'%" + txbTK.Text + "%'or MaGV like '%" + txbTK.Text + "%' or MaMH like '%" + cbbMaMH + "%'";

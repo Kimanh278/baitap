@@ -8,6 +8,6 @@ namespace WQLHS_GV1
 {
     class ConnectionString
     {
-        public static string connectionstring = @"Data Source=DESKTOP-M2KIF2A\KIM;Initial Catalog=QLHS_GV1;Integrated Security=True";
+        public static string connectionstring = @"Data Source=DESKTOP-52RAFDJ\SQLEXPRESS;Initial Catalog=QLHS_GV1;Integrated Security=True";
     }
 }
