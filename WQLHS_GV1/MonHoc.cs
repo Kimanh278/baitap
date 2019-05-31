@@ -23,6 +23,8 @@ namespace WQLHS_GV1
             // TODO: This line of code loads data into the 'qLHS_GV1DataSet.MONHOC' table. You can move, or remove it, as needed.
             this.mONHOCTableAdapter.Fill(this.qLHS_GV1DataSet.MONHOC);
             con.Open();
+            loadcombobox();
+            loadcombobox1();
             GetAllMonHoc();
         }
         public void GetAllMonHoc()
@@ -119,6 +121,42 @@ namespace WQLHS_GV1
             }
             catch
             { }
+        }
+        void loadcombobox()
+        {
+            var cmd = new SqlCommand("select MaMH from MonHoc", con);
+            var dr = cmd.ExecuteReader();
+            var dt = new DataTable();
+            dt.Load(dr);
+            dr.Dispose();
+            cbbMaMH.DisplayMember = "MaMH";
+            cbbMaMH.DataSource = dt;
+        }
+        void loadcombobox1()
+        {
+            var cmd = new SqlCommand("select MaHK from HocKy", con);
+            var dr = cmd.ExecuteReader();
+            var dt = new DataTable();
+            dt.Load(dr);
+            dr.Dispose();
+            cbbMaHK.DisplayMember = "MaHK";
+            cbbMaHK.DataSource = dt;
+        }
+
+        private void btnTìmKiem_Click(object sender, EventArgs e)
+        {
+            var cmd = new SqlCommand("Select_DiemMH", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@MaMH", SqlDbType.Char).Value = cbbMaMH.Text;
+            cmd.Parameters.Add("@MaHK", SqlDbType.Char).Value = cbbMaHK.Text;  
+            var dap = new SqlDataAdapter(cmd);
+            var table = new DataTable();
+            dap.Fill(table);
+            dataGridView1.DataSource = table;
+           // cbbMaMH.DataBindings.Clear();
+           // cbbMaMH.DataBindings.Add("Text", dataGridView1.DataSource, "MaMH");
+           // cbbMaHK.DataBindings.Clear();
+           //cbbMaHK.DataBindings.Add("Text", dataGridView1.DataSource, "MaHK");
         }
     }
 }

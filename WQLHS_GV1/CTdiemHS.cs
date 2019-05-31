@@ -260,10 +260,7 @@ namespace WQLHS_GV1
         {
             string stInsert = "insert into DIEM(DiemM_1,DiemM_2,DiemM_3,D15_1,D15_2,D15_3,D45_1,D45_2,DThi)values(@DiemM_1,@DiemM_2,@DiemM_3,@D15_1,@D15_2,@D15_3,@D45_1,@D45_2,@DThi)";
             SqlCommand stinscmd = new SqlCommand(stInsert, con);
-            //stinscmd.Parameters.AddWithValue("MaHS", txbMaHS.Text);
-            //stinscmd.Parameters.AddWithValue("MaMH", txbMH.Text);
-            //stinscmd.Parameters.AddWithValue("MaNH", txbNamH.Text);
-            //stinscmd.Parameters.AddWithValue("MaHK", txbMaHK.Text);
+            
             stinscmd.Parameters.AddWithValue("DiemM_1", txbDM_1.Text);
             stinscmd.Parameters.AddWithValue("DiemM_2", txbDM_2.Text);
             stinscmd.Parameters.AddWithValue("DiemM_3", txbDM_3.Text);

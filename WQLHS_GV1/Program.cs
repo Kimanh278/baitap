@@ -16,7 +16,7 @@ namespace WQLHS_GV1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DN());
+            Application.Run(new HS());
         }
     }
 }

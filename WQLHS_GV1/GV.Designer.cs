@@ -29,10 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnQL = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.cbbMaMH = new System.Windows.Forms.ComboBox();
+            this.gIAOVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLHS_GV1DataSet8 = new WQLHS_GV1.QLHS_GV1DataSet8();
             this.Ma = new MetroFramework.Controls.MetroLabel();
             this.txbMaGV = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
@@ -40,26 +45,21 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.txbDiaChi = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnQL = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnTK = new MetroFramework.Controls.MetroButton();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.txbTK = new MetroFramework.Controls.MetroTextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.qLHS_GV1DataSet8 = new WQLHS_GV1.QLHS_GV1DataSet8();
-            this.gIAOVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gIAOVIENTableAdapter = new WQLHS_GV1.QLHS_GV1DataSet8TableAdapters.GIAOVIENTableAdapter();
             this.maGVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenGVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diaChiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maMHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnTK = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.txbTK = new MetroFramework.Controls.MetroTextBox();
+            this.gIAOVIENTableAdapter = new WQLHS_GV1.QLHS_GV1DataSet8TableAdapters.GIAOVIENTableAdapter();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLHS_GV1DataSet8)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLHS_GV1DataSet8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -77,7 +77,7 @@
             this.groupBox1.Controls.Add(this.metroLabel3);
             this.groupBox1.Controls.Add(this.txbDiaChi);
             this.groupBox1.Controls.Add(this.metroLabel4);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(23, 75);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(298, 441);
@@ -85,20 +85,51 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin giáo viên";
             // 
-            // groupBox2
+            // btnSua
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.btnTK);
-            this.groupBox2.Controls.Add(this.metroLabel1);
-            this.groupBox2.Controls.Add(this.txbTK);
-            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(327, 75);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(908, 441);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Hiển thị";
+            this.btnSua.Image = global::WQLHS_GV1.Properties.Resources.agt_update_drivers;
+            this.btnSua.Location = new System.Drawing.Point(180, 247);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 61);
+            this.btnSua.TabIndex = 56;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Image = global::WQLHS_GV1.Properties.Resources.cancel;
+            this.btnXoa.Location = new System.Drawing.Point(17, 338);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 62);
+            this.btnXoa.TabIndex = 55;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnQL
+            // 
+            this.btnQL.BackgroundImage = global::WQLHS_GV1.Properties.Resources.home1;
+            this.btnQL.Location = new System.Drawing.Point(180, 338);
+            this.btnQL.Name = "btnQL";
+            this.btnQL.Size = new System.Drawing.Size(63, 62);
+            this.btnQL.TabIndex = 54;
+            this.btnQL.Text = "Quay Lại";
+            this.btnQL.UseVisualStyleBackColor = true;
+            this.btnQL.Click += new System.EventHandler(this.btnQL_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Image = global::WQLHS_GV1.Properties.Resources.applications;
+            this.btnThem.Location = new System.Drawing.Point(17, 247);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 61);
+            this.btnThem.TabIndex = 53;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // cbbMaMH
             // 
@@ -108,10 +139,20 @@
             this.cbbMaMH.FormattingEnabled = true;
             this.cbbMaMH.Location = new System.Drawing.Point(135, 181);
             this.cbbMaMH.Name = "cbbMaMH";
-            this.cbbMaMH.Size = new System.Drawing.Size(131, 23);
+            this.cbbMaMH.Size = new System.Drawing.Size(131, 27);
             this.cbbMaMH.TabIndex = 52;
             this.cbbMaMH.ValueMember = "MaMH";
             this.cbbMaMH.SelectedIndexChanged += new System.EventHandler(this.cbbMaMH_SelectedIndexChanged);
+            // 
+            // gIAOVIENBindingSource
+            // 
+            this.gIAOVIENBindingSource.DataMember = "GIAOVIEN";
+            this.gIAOVIENBindingSource.DataSource = this.qLHS_GV1DataSet8;
+            // 
+            // qLHS_GV1DataSet8
+            // 
+            this.qLHS_GV1DataSet8.DataSetName = "QLHS_GV1DataSet8";
+            this.qLHS_GV1DataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Ma
             // 
@@ -170,51 +211,69 @@
             this.metroLabel4.TabIndex = 48;
             this.metroLabel4.Text = "Mã Môn học";
             // 
-            // btnSua
+            // groupBox2
             // 
-            this.btnSua.Image = global::WQLHS_GV1.Properties.Resources.agt_update_drivers;
-            this.btnSua.Location = new System.Drawing.Point(180, 247);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 61);
-            this.btnSua.TabIndex = 56;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.btnTK);
+            this.groupBox2.Controls.Add(this.metroLabel1);
+            this.groupBox2.Controls.Add(this.txbTK);
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(327, 75);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(908, 441);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Hiển thị";
             // 
-            // btnXoa
+            // dataGridView1
             // 
-            this.btnXoa.Image = global::WQLHS_GV1.Properties.Resources.cancel;
-            this.btnXoa.Location = new System.Drawing.Point(17, 338);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 62);
-            this.btnXoa.TabIndex = 55;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maGVDataGridViewTextBoxColumn,
+            this.tenGVDataGridViewTextBoxColumn,
+            this.diaChiDataGridViewTextBoxColumn,
+            this.maMHDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.gIAOVIENBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(23, 84);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(856, 342);
+            this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
-            // btnQL
+            // maGVDataGridViewTextBoxColumn
             // 
-            this.btnQL.BackgroundImage = global::WQLHS_GV1.Properties.Resources.home1;
-            this.btnQL.Location = new System.Drawing.Point(180, 338);
-            this.btnQL.Name = "btnQL";
-            this.btnQL.Size = new System.Drawing.Size(63, 62);
-            this.btnQL.TabIndex = 54;
-            this.btnQL.Text = "Quay Lại";
-            this.btnQL.UseVisualStyleBackColor = true;
-            this.btnQL.Click += new System.EventHandler(this.btnQL_Click);
+            this.maGVDataGridViewTextBoxColumn.DataPropertyName = "MaGV";
+            this.maGVDataGridViewTextBoxColumn.HeaderText = "Mã giáo viên";
+            this.maGVDataGridViewTextBoxColumn.Name = "maGVDataGridViewTextBoxColumn";
             // 
-            // btnThem
+            // tenGVDataGridViewTextBoxColumn
             // 
-            this.btnThem.Image = global::WQLHS_GV1.Properties.Resources.applications;
-            this.btnThem.Location = new System.Drawing.Point(17, 247);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 61);
-            this.btnThem.TabIndex = 53;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.tenGVDataGridViewTextBoxColumn.DataPropertyName = "TenGV";
+            this.tenGVDataGridViewTextBoxColumn.HeaderText = "Tên giáo viên";
+            this.tenGVDataGridViewTextBoxColumn.Name = "tenGVDataGridViewTextBoxColumn";
+            // 
+            // diaChiDataGridViewTextBoxColumn
+            // 
+            this.diaChiDataGridViewTextBoxColumn.DataPropertyName = "DiaChi";
+            this.diaChiDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
+            this.diaChiDataGridViewTextBoxColumn.Name = "diaChiDataGridViewTextBoxColumn";
+            // 
+            // maMHDataGridViewTextBoxColumn
+            // 
+            this.maMHDataGridViewTextBoxColumn.DataPropertyName = "MaMH";
+            this.maMHDataGridViewTextBoxColumn.HeaderText = "Mã môn học";
+            this.maMHDataGridViewTextBoxColumn.Name = "maMHDataGridViewTextBoxColumn";
             // 
             // btnTK
             // 
@@ -241,68 +300,9 @@
             this.txbTK.Size = new System.Drawing.Size(214, 23);
             this.txbTK.TabIndex = 14;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maGVDataGridViewTextBoxColumn,
-            this.tenGVDataGridViewTextBoxColumn,
-            this.diaChiDataGridViewTextBoxColumn,
-            this.maMHDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.gIAOVIENBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 84);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(856, 342);
-            this.dataGridView1.TabIndex = 15;
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // qLHS_GV1DataSet8
-            // 
-            this.qLHS_GV1DataSet8.DataSetName = "QLHS_GV1DataSet8";
-            this.qLHS_GV1DataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gIAOVIENBindingSource
-            // 
-            this.gIAOVIENBindingSource.DataMember = "GIAOVIEN";
-            this.gIAOVIENBindingSource.DataSource = this.qLHS_GV1DataSet8;
-            // 
             // gIAOVIENTableAdapter
             // 
             this.gIAOVIENTableAdapter.ClearBeforeFill = true;
-            // 
-            // maGVDataGridViewTextBoxColumn
-            // 
-            this.maGVDataGridViewTextBoxColumn.DataPropertyName = "MaGV";
-            this.maGVDataGridViewTextBoxColumn.HeaderText = "Mã giáo viên";
-            this.maGVDataGridViewTextBoxColumn.Name = "maGVDataGridViewTextBoxColumn";
-            // 
-            // tenGVDataGridViewTextBoxColumn
-            // 
-            this.tenGVDataGridViewTextBoxColumn.DataPropertyName = "TenGV";
-            this.tenGVDataGridViewTextBoxColumn.HeaderText = "Tên giáo viên";
-            this.tenGVDataGridViewTextBoxColumn.Name = "tenGVDataGridViewTextBoxColumn";
-            // 
-            // diaChiDataGridViewTextBoxColumn
-            // 
-            this.diaChiDataGridViewTextBoxColumn.DataPropertyName = "DiaChi";
-            this.diaChiDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
-            this.diaChiDataGridViewTextBoxColumn.Name = "diaChiDataGridViewTextBoxColumn";
-            // 
-            // maMHDataGridViewTextBoxColumn
-            // 
-            this.maMHDataGridViewTextBoxColumn.DataPropertyName = "MaMH";
-            this.maMHDataGridViewTextBoxColumn.HeaderText = "Mã môn học";
-            this.maMHDataGridViewTextBoxColumn.Name = "maMHDataGridViewTextBoxColumn";
             // 
             // GV
             // 
@@ -317,11 +317,11 @@
             this.Load += new System.EventHandler(this.GV_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLHS_GV1DataSet8)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLHS_GV1DataSet8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

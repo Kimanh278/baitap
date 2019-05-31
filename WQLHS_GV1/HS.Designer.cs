@@ -67,6 +67,9 @@
             this.qLHS_GV1DataSet12 = new WQLHS_GV1.QLHS_GV1DataSet12();
             this.qLHSGV1DataSet12BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hOCSINHTableAdapter1 = new WQLHS_GV1.QLHS_GV1DataSet13TableAdapters.HOCSINHTableAdapter();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.cbbTenLop = new System.Windows.Forms.ComboBox();
+            this.btnTimKiem = new MetroFramework.Controls.MetroButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -97,7 +100,7 @@
             this.groupBox1.Controls.Add(this.metroLabel4);
             this.groupBox1.Controls.Add(this.metroLabel5);
             this.groupBox1.Controls.Add(this.cbbMaLop);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(14, 72);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(322, 496);
@@ -211,7 +214,7 @@
             this.dtpNgaySinh.CustomFormat = "yyyy-MM-dd";
             this.dtpNgaySinh.Location = new System.Drawing.Point(97, 183);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(201, 22);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(201, 26);
             this.dtpNgaySinh.TabIndex = 63;
             this.dtpNgaySinh.Value = new System.DateTime(2019, 5, 3, 0, 0, 0, 0);
             // 
@@ -263,11 +266,14 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.groupBox2.Controls.Add(this.btnTimKiem);
+            this.groupBox2.Controls.Add(this.cbbTenLop);
+            this.groupBox2.Controls.Add(this.metroLabel8);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.btnTK);
             this.groupBox2.Controls.Add(this.metroLabel6);
             this.groupBox2.Controls.Add(this.txbTK);
-            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(342, 72);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(913, 508);
@@ -281,7 +287,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -350,7 +356,7 @@
             // 
             // btnTK
             // 
-            this.btnTK.Location = new System.Drawing.Point(654, 23);
+            this.btnTK.Location = new System.Drawing.Point(650, 18);
             this.btnTK.Name = "btnTK";
             this.btnTK.Size = new System.Drawing.Size(75, 23);
             this.btnTK.TabIndex = 69;
@@ -360,7 +366,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(206, 23);
+            this.metroLabel6.Location = new System.Drawing.Point(208, 18);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(144, 19);
             this.metroLabel6.TabIndex = 67;
@@ -368,7 +374,7 @@
             // 
             // txbTK
             // 
-            this.txbTK.Location = new System.Drawing.Point(390, 23);
+            this.txbTK.Location = new System.Drawing.Point(385, 18);
             this.txbTK.Name = "txbTK";
             this.txbTK.Size = new System.Drawing.Size(224, 23);
             this.txbTK.TabIndex = 68;
@@ -410,6 +416,34 @@
             // hOCSINHTableAdapter1
             // 
             this.hOCSINHTableAdapter1.ClearBeforeFill = true;
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(208, 48);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(167, 19);
+            this.metroLabel8.TabIndex = 71;
+            this.metroLabel8.Text = "Tìm kiếm học sinh theo lớp";
+            // 
+            // cbbTenLop
+            // 
+            this.cbbTenLop.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonMenu;
+            this.cbbTenLop.FormattingEnabled = true;
+            this.cbbTenLop.Location = new System.Drawing.Point(385, 48);
+            this.cbbTenLop.Name = "cbbTenLop";
+            this.cbbTenLop.Size = new System.Drawing.Size(121, 27);
+            this.cbbTenLop.TabIndex = 72;
+            this.cbbTenLop.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Location = new System.Drawing.Point(650, 48);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
+            this.btnTimKiem.TabIndex = 73;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // HS
             // 
@@ -477,5 +511,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maLopDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox cbbTenLop;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private MetroFramework.Controls.MetroButton btnTimKiem;
     }
 }

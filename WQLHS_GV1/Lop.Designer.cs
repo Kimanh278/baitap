@@ -48,6 +48,10 @@
             this.gIAOVIENTableAdapter = new WQLHS_GV1.QLHS_GV1DataSetTableAdapters.GIAOVIENTableAdapter();
             this.lOPBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.maLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maNHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maGVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -58,10 +62,6 @@
             this.txbMaGV = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.maLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maNHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maGVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nAMHOCBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLHS_GV1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).BeginInit();
@@ -199,7 +199,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -217,6 +217,30 @@
             this.dataGridView1.Size = new System.Drawing.Size(491, 258);
             this.dataGridView1.TabIndex = 48;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dgvStudent_SelectionChanged);
+            // 
+            // maLopDataGridViewTextBoxColumn
+            // 
+            this.maLopDataGridViewTextBoxColumn.DataPropertyName = "MaLop";
+            this.maLopDataGridViewTextBoxColumn.HeaderText = "Mã Lớp";
+            this.maLopDataGridViewTextBoxColumn.Name = "maLopDataGridViewTextBoxColumn";
+            // 
+            // tenLopDataGridViewTextBoxColumn
+            // 
+            this.tenLopDataGridViewTextBoxColumn.DataPropertyName = "TenLop";
+            this.tenLopDataGridViewTextBoxColumn.HeaderText = "Tên Lớp";
+            this.tenLopDataGridViewTextBoxColumn.Name = "tenLopDataGridViewTextBoxColumn";
+            // 
+            // maNHDataGridViewTextBoxColumn
+            // 
+            this.maNHDataGridViewTextBoxColumn.DataPropertyName = "MaNH";
+            this.maNHDataGridViewTextBoxColumn.HeaderText = "Mã Năm học";
+            this.maNHDataGridViewTextBoxColumn.Name = "maNHDataGridViewTextBoxColumn";
+            // 
+            // maGVDataGridViewTextBoxColumn
+            // 
+            this.maGVDataGridViewTextBoxColumn.DataPropertyName = "MaGV";
+            this.maGVDataGridViewTextBoxColumn.HeaderText = "Giáo viên chủ nhiệm";
+            this.maGVDataGridViewTextBoxColumn.Name = "maGVDataGridViewTextBoxColumn";
             // 
             // metroLabel1
             // 
@@ -303,6 +327,7 @@
             this.groupBox1.Controls.Add(this.mttSua);
             this.groupBox1.Controls.Add(this.cbbMaNH);
             this.groupBox1.Controls.Add(this.txbMaGV);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(23, 95);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(440, 447);
@@ -317,36 +342,13 @@
             this.groupBox2.Controls.Add(this.txbTK);
             this.groupBox2.Controls.Add(this.btnTK);
             this.groupBox2.Controls.Add(this.metroLabel6);
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(469, 95);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(556, 447);
             this.groupBox2.TabIndex = 50;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hiển thị thông tin";
-            // 
-            // maLopDataGridViewTextBoxColumn
-            // 
-            this.maLopDataGridViewTextBoxColumn.DataPropertyName = "MaLop";
-            this.maLopDataGridViewTextBoxColumn.HeaderText = "Mã Lớp";
-            this.maLopDataGridViewTextBoxColumn.Name = "maLopDataGridViewTextBoxColumn";
-            // 
-            // tenLopDataGridViewTextBoxColumn
-            // 
-            this.tenLopDataGridViewTextBoxColumn.DataPropertyName = "TenLop";
-            this.tenLopDataGridViewTextBoxColumn.HeaderText = "Tên Lớp";
-            this.tenLopDataGridViewTextBoxColumn.Name = "tenLopDataGridViewTextBoxColumn";
-            // 
-            // maNHDataGridViewTextBoxColumn
-            // 
-            this.maNHDataGridViewTextBoxColumn.DataPropertyName = "MaNH";
-            this.maNHDataGridViewTextBoxColumn.HeaderText = "Mã Năm học";
-            this.maNHDataGridViewTextBoxColumn.Name = "maNHDataGridViewTextBoxColumn";
-            // 
-            // maGVDataGridViewTextBoxColumn
-            // 
-            this.maGVDataGridViewTextBoxColumn.DataPropertyName = "MaGV";
-            this.maGVDataGridViewTextBoxColumn.HeaderText = "Giáo viên chủ nhiệm";
-            this.maGVDataGridViewTextBoxColumn.Name = "maGVDataGridViewTextBoxColumn";
             // 
             // Lop
             // 

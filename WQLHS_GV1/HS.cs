@@ -36,6 +36,7 @@ namespace WQLHS_GV1
             this.hOCSINHTableAdapter.Fill(this.qLHS_GV1DataSet10.HOCSINH);
             con.Open();
             loadcombobox();
+            loadcombo();
             loadcombobox2();
             GetAllHocSinh();
 
@@ -142,7 +143,7 @@ namespace WQLHS_GV1
         }
         void loadcombobox2()
         {
-            var cmd = new SqlCommand("select MaLop from HocSinh", con);
+            var cmd = new SqlCommand("select MaLop from Lop", con);
             var dr = cmd.ExecuteReader();
             var dt = new DataTable();
             dt.Load(dr);
@@ -170,6 +171,32 @@ namespace WQLHS_GV1
             string TimKiem = txbTK.Text;
             string query = "select *from dbo.HOCSINH where TenHS like N'%" + TimKiem + "%'or MaHS like '%" + TimKiem + "%'or GioiTinh like '%" + TimKiem + "%'or MaLop like '%" + TimKiem + "%'or DiaChi like N'%" + TimKiem + "%' ";
             dataGridView1.DataSource = timkiem(query).Tables[0];
+        }
+        void loadcombo()
+        {
+            var cmd = new SqlCommand("select TenLop from Lop", con);
+            var dr = cmd.ExecuteReader();
+            var dt = new DataTable();
+            dt.Load(dr);
+            dr.Dispose();
+            cbbTenLop.DisplayMember = "TenLop";
+            cbbTenLop.DataSource = dt;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            var cmd = new SqlCommand("Select_HSLop", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@TenLop", SqlDbType.VarChar).Value = cbbTenLop.Text;           
+            var dap = new SqlDataAdapter(cmd);
+            var table = new DataTable();
+            dap.Fill(table);
+            dataGridView1.DataSource = table;
         }
     }
  }
