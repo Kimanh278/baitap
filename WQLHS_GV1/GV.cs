@@ -114,6 +114,7 @@ namespace WQLHS_GV1
             stinscmd.ExecuteNonQuery();
             GetAllGiaoVien();
         }
+        //xoa giao vien
 
         private void btnXoa_Click(object sender, EventArgs e)
         {

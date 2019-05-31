@@ -78,7 +78,6 @@ namespace WQLHS_GV1
             catch
             { }
         }
-
         private void mttSua_Click(object sender, EventArgs e)
         {
             string stUpdate = "update LOP set TenLop = @TenLop, MaNH = @MaNH, MaGV = @MaGV where MaLop = @MaLop";
@@ -90,7 +89,7 @@ namespace WQLHS_GV1
             stinscmd.ExecuteNonQuery();
             GetAllLop();
         }
-
+        //xoathongtinlop
         private void mttXoa_Click(object sender, EventArgs e)
         {
             string stDelete = "delete from Lop where MaLop = @Malop";
