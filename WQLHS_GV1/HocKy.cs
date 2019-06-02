@@ -40,7 +40,7 @@ namespace WQLHS_GV1
         private void HocKy_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'qLHS_GV1DataSet.HOCKY' table. You can move, or remove it, as needed.
-            this.hOCKYTableAdapter.Fill(this.qLHS_GV1DataSet.HOCKY);
+            //this.hOCKYTableAdapter.Fill(this.qLHS_GV1DataSet.HOCKY);
             con.Open();
             GetAllHocKy();
 

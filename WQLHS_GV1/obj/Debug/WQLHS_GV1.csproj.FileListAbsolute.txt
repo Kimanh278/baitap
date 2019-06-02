@@ -346,6 +346,15 @@ C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\SqlServer
 C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\Report1.rdlc
 C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\Report2.rdlc
+C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\QLHS_GV1DataSet12.Designer.cs
+C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\QLHS_GV1DataSet13.cs
+C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\QLHS_GV1DataSet13.Designer.cs
+C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\QLHS_GV1DataSet12.xsc
+C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\QLHS_GV1DataSet12.xsd
+C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\QLHS_GV1DataSet12.xss
+C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\QLHS_GV1DataSet13.xsc
+C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\QLHS_GV1DataSet13.xsd
+C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\QLHS_GV1DataSet13.xss
 C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\WQLHS_GV1.exe.config
 C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\WQLHS_GV1.exe
 C:\Users\Doan Thi Kim Lien\Documents\GitHub\baitap\WQLHS_GV1\bin\Debug\WQLHS_GV1.pdb

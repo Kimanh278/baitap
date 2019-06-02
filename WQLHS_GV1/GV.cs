@@ -27,7 +27,7 @@ namespace WQLHS_GV1
         private void GV_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'qLHS_GV1DataSet8.GIAOVIEN' table. You can move, or remove it, as needed.
-            this.gIAOVIENTableAdapter.Fill(this.qLHS_GV1DataSet8.GIAOVIEN);
+            //this.gIAOVIENTableAdapter.Fill(this.qLHS_GV1DataSet8.GIAOVIEN);
             con.Open();
             GetAllGiaoVien();
 

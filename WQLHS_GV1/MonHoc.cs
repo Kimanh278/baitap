@@ -21,7 +21,7 @@ namespace WQLHS_GV1
         private void MonHoc_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'qLHS_GV1DataSet.MONHOC' table. You can move, or remove it, as needed.
-            this.mONHOCTableAdapter.Fill(this.qLHS_GV1DataSet.MONHOC);
+            //this.mONHOCTableAdapter.Fill(this.qLHS_GV1DataSet.MONHOC);
             con.Open();
             loadcombobox();
             loadcombobox1();

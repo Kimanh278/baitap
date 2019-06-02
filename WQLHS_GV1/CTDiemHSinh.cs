@@ -22,14 +22,14 @@ namespace WQLHS_GV1
 
         private void CTDiemHSinh_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLHS_GV1DataSet10.MONHOC' table. You can move, or remove it, as needed.
-            this.mONHOCTableAdapter.Fill(this.qLHS_GV1DataSet10.MONHOC);
-            // TODO: This line of code loads data into the 'qLHS_GV1DataSet10.LOP' table. You can move, or remove it, as needed.
-            this.lOPTableAdapter.Fill(this.qLHS_GV1DataSet10.LOP);
-            // TODO: This line of code loads data into the 'qLHS_GV1DataSet10.HOCKY' table. You can move, or remove it, as needed.
-            this.hOCKYTableAdapter.Fill(this.qLHS_GV1DataSet10.HOCKY);
-            // TODO: This line of code loads data into the 'qLHS_GV1DataSet10.NAMHOC' table. You can move, or remove it, as needed.
-            this.nAMHOCTableAdapter.Fill(this.qLHS_GV1DataSet10.NAMHOC);
+            //// TODO: This line of code loads data into the 'qLHS_GV1DataSet10.MONHOC' table. You can move, or remove it, as needed.
+            //this.mONHOCTableAdapter.Fill(this.qLHS_GV1DataSet10.MONHOC);
+            //// TODO: This line of code loads data into the 'qLHS_GV1DataSet10.LOP' table. You can move, or remove it, as needed.
+            //this.lOPTableAdapter.Fill(this.qLHS_GV1DataSet10.LOP);
+            //// TODO: This line of code loads data into the 'qLHS_GV1DataSet10.HOCKY' table. You can move, or remove it, as needed.
+            //this.hOCKYTableAdapter.Fill(this.qLHS_GV1DataSet10.HOCKY);
+            //// TODO: This line of code loads data into the 'qLHS_GV1DataSet10.NAMHOC' table. You can move, or remove it, as needed.
+            //this.nAMHOCTableAdapter.Fill(this.qLHS_GV1DataSet10.NAMHOC);
             con.Open();
             this.reportViewer1.RefreshReport();
         }

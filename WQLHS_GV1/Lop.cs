@@ -22,12 +22,13 @@ namespace WQLHS_GV1
         private void Lop_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'qLHS_GV1DataSet.GIAOVIEN' table. You can move, or remove it, as needed.
-            this.gIAOVIENTableAdapter.Fill(this.qLHS_GV1DataSet.GIAOVIEN);
+          //  this.gIAOVIENTableAdapter.Fill(this.qLHS_GV1DataSet.GIAOVIEN);
             // TODO: This line of code loads data into the 'qLHS_GV1DataSet.NAMHOC' table. You can move, or remove it, as needed.
-            this.nAMHOCTableAdapter.Fill(this.qLHS_GV1DataSet.NAMHOC);
+            //this.nAMHOCTableAdapter.Fill(this.qLHS_GV1DataSet.NAMHOC);
             // TODO: This line of code loads data into the 'qLHS_GV1DataSet.LOP' table. You can move, or remove it, as needed.
-            this.lOPTableAdapter.Fill(this.qLHS_GV1DataSet.LOP);
+          //  this.lOPTableAdapter.Fill(this.qLHS_GV1DataSet.LOP);
             con.Open();
+            combobox();
             GetAllLop();
         }
         private void LoadData()
@@ -78,6 +79,11 @@ namespace WQLHS_GV1
             catch
             { }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void mttSua_Click(object sender, EventArgs e)
         {
             string stUpdate = "update LOP set TenLop = @TenLop, MaNH = @MaNH, MaGV = @MaGV where MaLop = @MaLop";
@@ -128,10 +134,30 @@ namespace WQLHS_GV1
             string query = "select *from dbo.Lop where TenLop like N'" + TimKiem + "%'or MaLop like '" + TimKiem + "%'";
             dataGridView1.DataSource = timkiem(query).Tables[0];
         }
-
+        void combobox()
+        {
+            var cmd = new SqlCommand("select MaGV from GiaoVien", con);
+            var dr = cmd.ExecuteReader();
+            var dt = new DataTable();
+            dt.Load(dr);
+            dr.Dispose();
+            cbbTKGV.DisplayMember = "MaGV";
+           cbbTKGV.DataSource = dt;
+        }
         private void Lop_FormClosed(object sender, FormClosedEventArgs e)
         {
             con.Close();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            var cmd = new SqlCommand("Select_GV", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@MaGV", SqlDbType.VarChar).Value = cbbTKGV.Text;
+            var dap = new SqlDataAdapter(cmd);
+            var table = new DataTable();
+            dap.Fill(table);
+            dataGridView1.DataSource = table;
         }
     }
 }

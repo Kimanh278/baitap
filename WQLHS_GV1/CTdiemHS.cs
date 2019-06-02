@@ -26,13 +26,14 @@ namespace WQLHS_GV1
 
         private void CTdiemHS_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLHS_GV1DataSet10.HOCSINH' table. You can move, or remove it, as needed.
-            this.hOCSINHTableAdapter.Fill(this.qLHS_GV1DataSet10.HOCSINH);
-            // TODO: This line of code loads data into the 'qLHS_GV1DataSet10.MONHOC' table. You can move, or remove it, as needed.
-            this.mONHOCTableAdapter.Fill(this.qLHS_GV1DataSet10.MONHOC);
-            // TODO: This line of code loads data into the 'qLHS_GV1DataSet10.LOP' table. You can move, or remove it, as needed.
-            this.lOPTableAdapter.Fill(this.qLHS_GV1DataSet10.LOP);
             con.Open();
+
+            // TODO: This line of code loads data into the 'qLHS_GV1DataSet10.HOCSINH' table. You can move, or remove it, as needed.
+            //this.hOCSINHTableAdapter.Fill(this.qLHS_GV1DataSet10.HOCSINH);
+            //// TODO: This line of code loads data into the 'qLHS_GV1DataSet10.MONHOC' table. You can move, or remove it, as needed.
+            //this.mONHOCTableAdapter.Fill(this.qLHS_GV1DataSet10.MONHOC);
+            // TODO: This line of code loads data into the 'qLHS_GV1DataSet10.LOP' table. You can move, or remove it, as needed.
+            //this.lOPTableAdapter.Fill(this.qLHS_GV1DataSet10.LOP);
             GetAllDiem();
         }
         public void GetAllDiem()

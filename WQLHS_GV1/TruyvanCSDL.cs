@@ -13,7 +13,7 @@ namespace WQLHS_GV1
         public static DataTable filldb(String name, params object[] po)
         {
             DataTable dt = new DataTable();
-            SqlConnection con = new SqlConnection(@"Data Source = DESKTOP-M2KIF2A\KIM; Initial Catalog = QLHS_GV1; Integrated Security = True");
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-52RAFDJ\SQLEXPRESS;Initial Catalog=QLHS_GV1;Integrated Security=True");
             if (con.State == ConnectionState.Closed) con.Open();
             SqlDataAdapter sda = new SqlDataAdapter(name, con);
             sda.SelectCommand.CommandType = CommandType.StoredProcedure;

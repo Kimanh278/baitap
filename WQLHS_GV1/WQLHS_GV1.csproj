@@ -179,11 +179,17 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLHS_GV1DataSet12.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="QLHS_GV1DataSet13.cs">
+      <DependentUpon>QLHS_GV1DataSet13.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="QLHS_GV1DataSet13.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLHS_GV1DataSet13.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="QLHS_GV1DataSet14.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -376,25 +382,31 @@
     </None>
     <None Include="QLHS_GV1DataSet12.xsc">
       <DependentUpon>QLHS_GV1DataSet12.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="QLHS_GV1DataSet12.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>QLHS_GV1DataSet12.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="QLHS_GV1DataSet12.xss">
       <DependentUpon>QLHS_GV1DataSet12.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="QLHS_GV1DataSet13.xsc">
       <DependentUpon>QLHS_GV1DataSet13.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="QLHS_GV1DataSet13.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>QLHS_GV1DataSet13.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="QLHS_GV1DataSet13.xss">
       <DependentUpon>QLHS_GV1DataSet13.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="QLHS_GV1DataSet14.xsc">
       <DependentUpon>QLHS_GV1DataSet14.xsd</DependentUpon>
