@@ -48,6 +48,9 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.cbbMaLop = new MetroFramework.Controls.MetroComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnTimKiem = new MetroFramework.Controls.MetroButton();
+            this.cbbTenLop = new System.Windows.Forms.ComboBox();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.maHSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenHSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,9 +70,6 @@
             this.qLHS_GV1DataSet12 = new WQLHS_GV1.QLHS_GV1DataSet12();
             this.qLHSGV1DataSet12BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hOCSINHTableAdapter1 = new WQLHS_GV1.QLHS_GV1DataSet13TableAdapters.HOCSINHTableAdapter();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.cbbTenLop = new System.Windows.Forms.ComboBox();
-            this.btnTimKiem = new MetroFramework.Controls.MetroButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -83,7 +83,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
@@ -281,6 +281,34 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hiển thị";
             // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Location = new System.Drawing.Point(650, 48);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
+            this.btnTimKiem.TabIndex = 73;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // cbbTenLop
+            // 
+            this.cbbTenLop.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonMenu;
+            this.cbbTenLop.FormattingEnabled = true;
+            this.cbbTenLop.Location = new System.Drawing.Point(385, 48);
+            this.cbbTenLop.Name = "cbbTenLop";
+            this.cbbTenLop.Size = new System.Drawing.Size(121, 27);
+            this.cbbTenLop.TabIndex = 72;
+            this.cbbTenLop.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(208, 48);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(167, 19);
+            this.metroLabel8.TabIndex = 71;
+            this.metroLabel8.Text = "Tìm kiếm học sinh theo lớp";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -416,34 +444,6 @@
             // hOCSINHTableAdapter1
             // 
             this.hOCSINHTableAdapter1.ClearBeforeFill = true;
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(208, 48);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(167, 19);
-            this.metroLabel8.TabIndex = 71;
-            this.metroLabel8.Text = "Tìm kiếm học sinh theo lớp";
-            // 
-            // cbbTenLop
-            // 
-            this.cbbTenLop.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonMenu;
-            this.cbbTenLop.FormattingEnabled = true;
-            this.cbbTenLop.Location = new System.Drawing.Point(385, 48);
-            this.cbbTenLop.Name = "cbbTenLop";
-            this.cbbTenLop.Size = new System.Drawing.Size(121, 27);
-            this.cbbTenLop.TabIndex = 72;
-            this.cbbTenLop.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Location = new System.Drawing.Point(650, 48);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
-            this.btnTimKiem.TabIndex = 73;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // HS
             // 
