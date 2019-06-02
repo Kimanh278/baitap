@@ -132,7 +132,7 @@ namespace WQLHS_GV1
 
         private void btnTK_Click(object sender, EventArgs e)
         {
-            string query = "select *from dbo.GIAOVIEN where TenGV like N'%" + txbTK.Text + "%'or MaGV like '%" + txbTK.Text + "%' or MaMH like '%" + cbbMaMH + "%'";
+            string query = "select *from dbo.GIAOVIEN where TenGV like '%" + txbTK.Text + "%'or MaGV like '%" + txbTK.Text + "%' or MaMH like '%" + cbbMaMH + "%'";
             dataGridView1.DataSource = timkiem(query).Tables[0];
         }
     }
